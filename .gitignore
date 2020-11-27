@@ -3,4 +3,11 @@
 
 # Ignore Gradle build output directory
 build
-/target/
+
+.settings
+.vscode
+.classpath
+.project
+target
+gradle/
+solution
