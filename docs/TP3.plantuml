@@ -1,0 +1,61 @@
+@startuml
+
+abstract class "Pizza" {
+  name : String
+  crust : String
+  sauce : String
+  garnishes : ArrayList<String>
+  bake()
+  cut()
+  prepare()
+  wrap()
+}
+
+class "PizzaCheeseStyleBrest"
+
+class "PizzaCheeseStyleStrasbourg" {
+  cut()
+}
+
+abstract class "PizzaFactory"
+
+class "PizzaFactoryBrest"
+
+class "PizzaFactoryStrasbourg"
+
+class "PizzaGrecqueStyleBrest"
+
+class "PizzaGrecqueStyleStrasbourg"
+
+class "PizzaPoivronStyleBrest"
+
+class "PizzaPoivronStyleStrasbourg"
+
+class "PizzaTestDrive"
+
+abstract class "Pizzeria" {
+  orderPizza(String) : Pizza
+}
+
+class "PizzeriaBrest"
+
+class "PizzeriaFactory" {
+  create(String) : Pizzeria
+}
+
+class "PizzeriaStrasbourg"
+
+"PizzaFactory" <|-- "PizzaFactoryBrest"
+"PizzaFactory" <|-- "PizzaFactoryStrasbourg"
+"Pizza" <|-- "PizzaCheeseStyleBrest"
+"Pizza" <|-- "PizzaCheeseStyleStrasbourg"
+"Pizza" <|-- "PizzaGrecqueStyleBrest"
+"Pizza" <|-- "PizzaGrecqueStyleStrasbourg"
+"Pizza" <|-- "PizzaPoivronStyleBrest"
+"Pizza" <|-- "PizzaPoivronStyleStrasbourg"
+"PizzeriaFactory" --> "Pizzeria" : use
+"Pizzeria" --> "Pizza" : use
+"Pizzeria" <|-- "PizzeriaBrest"
+"Pizzeria" <|-- "PizzeriaStrasbourg"
+
+@enduml
