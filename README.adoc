@@ -87,7 +87,7 @@ endif::[]
 //------------------------------------ 
 == {assignment}
 
-{lastName}:: ANDRE
+{lastName}:: ANDRÉ
 
 {firstName}:: Pierre
 
