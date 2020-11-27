@@ -1,3 +1,5 @@
+package tp3;
+
 public class PizzaFactoryStrasbourg extends PizzaFactory{
 	
 	private static PizzaFactoryStrasbourg uniqueInstance ;

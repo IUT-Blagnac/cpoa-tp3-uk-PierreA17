@@ -1,4 +1,4 @@
-
+package tp3;
 
 public abstract class PizzaFactory {
 	public static Pizza create(String name) {
